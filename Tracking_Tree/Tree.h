@@ -10,6 +10,8 @@ struct  Tree
 {
 	string ID, ParentID, Event, LHash = NULL, RHash = NULL;
 	vector<string> LHist, RHist;
+
+	void CreateEvent();
 };
 
 //TODO CreateID
