@@ -13,15 +13,17 @@ struct  Tree
 	vector<string> LHist, RHist;
 
 	void CreateEvent();
-	string createID(int position);
-
+	string createID(int position, string parent);
+	string hash(string thingToHash);
+	Tree createNode(int position, string parent);
+	void updateParentHash(Tree* childnode, Tree* parentnode)
 };
 
 
 
-//TODO CreateID
-//TODO CreateEvent
-//TODO CreateNode
+//TODO CreateID             // this is written and needs to be tested. 
+//TODO CreateEvent          // this is written and needs to be tested. 
+//TODO CreateNode             
 //TODO UpdateHash
 //TODO UpdateHistory
 //Testing

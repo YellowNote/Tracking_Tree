@@ -16,11 +16,7 @@ int main()
 }
 
 
-//void createChild(int parentposition, string parentid, string event, vector* currenttree) {
-	//this function will create a left child and returns the position
 
-
-//}
 
 
 
