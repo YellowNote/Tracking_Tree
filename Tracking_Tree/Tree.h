@@ -8,11 +8,16 @@ using namespace std;
 
 struct  Tree
 {
+	int position;
 	string ID, ParentID, Event, LHash = NULL, RHash = NULL;
 	vector<string> LHist, RHist;
 
 	void CreateEvent();
+	string createID(int position);
+
 };
+
+
 
 //TODO CreateID
 //TODO CreateEvent
