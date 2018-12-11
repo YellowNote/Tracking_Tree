@@ -1,6 +1,5 @@
 #include "Tree.h"
 
-//TODO CreateID
 
 void Tree::CreateEvent() {
 	static const char alpha[] =
@@ -10,11 +9,10 @@ void Tree::CreateEvent() {
 	int stringLength = sizeof(alpha) - 1;
 	Tree::Event = alpha[rand() % stringLength];
 }
-<<<<<<< HEAD
+
 void Tree::CreateEvent(string input) {
 	Tree::Event = input;
 }
-=======
 
 string Tree::createID(int position, string parent) {
 	static const char alpha[] =
@@ -61,7 +59,6 @@ void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 
 }
 
->>>>>>> 85c8b45d1d7c0afbdf4ea69b5e90faee5282656c
-//TODO CreateNode
+
 //TODO UpdateHash
 //TODO UpdateHistory

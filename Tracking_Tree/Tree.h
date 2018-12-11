@@ -13,14 +13,13 @@ struct  Tree
 	vector<string> LHist, RHist;
 
 	void CreateEvent();
-<<<<<<< HEAD
 	void CreateEvent(string input);
-=======
+
 	string createID(int position, string parent);
 	string hash(string thingToHash);
 	Tree createNode(int position, string parent);
 	void updateParentHash(Tree* childnode, Tree* parentnode)
->>>>>>> 85c8b45d1d7c0afbdf4ea69b5e90faee5282656c
+
 };
 
 
