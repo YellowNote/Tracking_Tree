@@ -40,7 +40,7 @@ string Tree::hash(string thingToHash) {           // we will have to find a hash
 Tree Tree::createNode(int position, string parent) {
 	CreateEvent();
 	createID(position, parent);
-	//update hash of parents
+	//update parent hashes
 }
 
 void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
@@ -56,6 +56,18 @@ void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 		parentnode->RHash = hash(childnode->Event);
 	}
 
+
+}
+
+void Tree::printNode() {
+	cout << "ID: " << this->ID << endl;
+	cout << "event: " << this->Event << endl;
+	cout << "left hash: " << this->LHash << endl;
+	cout << "right hash: " << this->RHash << endl;
+	string s1 = accumulate(begin(this->LHist), end(this->LHist), s1); // s1 is the string made from all of the strings in Lhist
+	string s2 = accumulate(begin(this->RHist), end(this->RHist), s2); // S2 is the string made from all the sting in Rhist
+	cout << "left History: " << s1 << endl;
+	cout << "right History: " << s2 << endl;
 
 }
 

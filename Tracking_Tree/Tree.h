@@ -3,7 +3,10 @@
 
 #include<string>
 #include<vector>
-
+#include<iostream>
+#include<numeric> // this is used to turn our history into a string for print/debug
+#include<random>
+#include<cmath>
 using namespace std;
 
 struct  Tree
@@ -21,6 +24,7 @@ struct  Tree
 	void updateParentHash(Tree* childnode, Tree* parentnode);
 	string getID(Tree* node);
 	string getEventHash(Tree* node);
+	void printNode();
 
 };
 
