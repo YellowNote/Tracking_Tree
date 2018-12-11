@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#solution pieces
+*.suo
+Browse.VC.db
+Tracking_Tree.vcxproj
+Tracking_Tree.vcxproj.fliters
