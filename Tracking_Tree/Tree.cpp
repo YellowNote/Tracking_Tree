@@ -60,5 +60,19 @@ void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 }
 
 
+
+
+
+// Helper functions for easily getting things from a node, ID, hash of event, ect...
+
+string Tree::getID(Tree* node) {
+	return this->ID;
+}
+string Tree::getEventHash(Tree* node) {
+	return hash(this->Event);
+}
+
+
+
 //TODO UpdateHash
 //TODO UpdateHistory

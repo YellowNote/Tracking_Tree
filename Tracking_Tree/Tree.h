@@ -18,7 +18,9 @@ struct  Tree
 	string createID(int position, string parent);
 	string hash(string thingToHash);
 	Tree createNode(int position, string parent);
-	void updateParentHash(Tree* childnode, Tree* parentnode)
+	void updateParentHash(Tree* childnode, Tree* parentnode);
+	string getID(Tree* node);
+	string getEventHash(Tree* node);
 
 };
 
