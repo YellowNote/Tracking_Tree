@@ -12,6 +12,7 @@ struct  Tree
 	vector<string> LHist, RHist;
 
 	void CreateEvent();
+	void CreateEvent(string input);
 };
 
 //TODO CreateID

@@ -1,7 +1,7 @@
 #include "Tree.h"
 
 //TODO CreateID
-//TODO CreateEvent
+
 void Tree::CreateEvent() {
 	static const char alpha[] =
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -9,6 +9,9 @@ void Tree::CreateEvent() {
 		"1234567890";
 	int stringLength = sizeof(alpha) - 1;
 	Tree::Event = alpha[rand() % stringLength];
+}
+void Tree::CreateEvent(string input) {
+	Tree::Event = input;
 }
 //TODO CreateNode
 //TODO UpdateHash
