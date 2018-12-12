@@ -5,7 +5,7 @@
 #include<vector>
 #include<iostream>
 #include<numeric> // this is used to turn our history into a string for print/debug
-#include<functional>//for the hash
+
 
 using namespace std;
 

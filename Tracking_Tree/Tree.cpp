@@ -34,10 +34,9 @@ string Tree::createID(int position, string parent) {
 	return id;
 }
 
-string Tree::hashing(string thingToHash) { 
-	size_t hashedItem = hash<string>{}(thingToHash);
-	ostringstream oss;
-	oss << hashedItem;
+string Tree::hashing(string thingToHash) {           // we will have to find a hashing algorithim for this but for now it will return what it gets, later to actaully return hash
+	std::ostringstream oss;
+	oss << thingToHash;
 	return oss.str();
 }
 /*
