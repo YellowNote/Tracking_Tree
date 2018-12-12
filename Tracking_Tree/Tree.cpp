@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Tree.h"
-#include <sstream>
 
 
 void Tree::CreateEvent() {
@@ -30,14 +29,13 @@ string Tree::createID(int position, string parent) {
 	{
 		ParentID = parent;
 	}
-	string id = hashing(ParentID).substr(0,3) + hashing(Event).substr(0,3);      // the ID is the concatenation of the parent id hashed for the first 4 chars and the has of event for the last 4
+	string id = hash(ParentID).substr(0,3) + hash(Event).substr(0,3);      // the ID is the concatenation of the parent id hashed for the first 4 chars and the has of event for the last 4
 	return id;
 }
 
-string Tree::hashing(string thingToHash) {           // we will have to find a hashing algorithim for this but for now it will return what it gets, later to actaully return hash
-	std::ostringstream oss;
-	oss << thingToHash;
-	return oss.str();
+string Tree::hash(string thingToHash) {           // we will have to find a hashing algorithim for this but for now it will return what it gets, later to actaully return hash
+	return thingToHash;
+
 }
 /*
 Tree Tree::createNode(int position, string parent) {
@@ -51,12 +49,12 @@ void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 	if (childnode->position % 2 == 0) // this is a left child in this case
 	{
 		parentnode->LHist.push_back(parentnode->LHash); // we update the history before we change the hash
-		parentnode->LHash = hashing(childnode->Event);
+		parentnode->LHash = hash(childnode->Event);
 	}
 	else // right tree
 	{
 		parentnode->RHist.push_back(parentnode->RHash);
-		parentnode->RHash = hashing(childnode->Event);
+		parentnode->RHash = hash(childnode->Event);
 	}
 
 
@@ -84,7 +82,7 @@ string Tree::getID(Tree* node) {
 	return this->ID;
 }
 string Tree::getEventHash(Tree* node) {
-	return hashing(this->Event);
+	return hash(this->Event);
 }
 
 
