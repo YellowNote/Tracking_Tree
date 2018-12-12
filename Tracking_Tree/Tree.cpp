@@ -41,11 +41,13 @@ string Tree::createID(int position, string parent) {
 	{
 		ParentID = parent;
 	}
-	string id = hash(ParentID).substr(0,3) + hash(Event).substr(0,3);      // the ID is the concatenation of the parent id hashed for the first 4 chars and the has of event for the last 4
+	string id = hashing(ParentID).substr(0,3) + hashing(Event).substr(0,3);      // the ID is the concatenation of the parent id hashed for the first 4 chars and the has of event for the last 4
 	return "11111111";
 }
 
-string Tree::hash(string thingToHash) {           // we will have to find a hashing algorithim for this but for now it will return what it gets, later to actaully return hash
+string Tree::hashing(string thingToHash) { // we will have to find a hashing algorithim for this but for now it will return what it gets, later to actaully return hash
+	oss.clear();
+	oss << thingToHash;
 	return thingToHash;
 
 }
@@ -57,12 +59,12 @@ void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 	if (childnode->position % 2 == 0) // this is a left child in this case
 	{
 		parentnode->LHist.push_back(parentnode->LHash); // we update the history before we change the hash
-		parentnode->LHash = hash(childnode->Event);
+		parentnode->LHash = hashing(childnode->Event);
 	}
 	else // right tree
 	{
 		parentnode->RHist.push_back(parentnode->RHash);
-		parentnode->RHash = hash(childnode->Event);
+		parentnode->RHash = hashing(childnode->Event);
 	}
 
 
@@ -90,7 +92,7 @@ string Tree::getID(Tree* node) {
 	return this->ID;
 }
 string Tree::getEventHash(Tree* node) {
-	return hash(this->Event);
+	return hashing(this->Event);
 }
 
 
