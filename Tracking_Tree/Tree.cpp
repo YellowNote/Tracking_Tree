@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Tree.h"
 
 
@@ -36,13 +37,13 @@ string Tree::hash(string thingToHash) {           // we will have to find a hash
 	return thingToHash;
 
 }
-
+/*
 Tree Tree::createNode(int position, string parent) {
 	CreateEvent();
 	createID(position, parent);
 	//update parent hashes
 }
-
+*/
 void Tree::updateParentHash(Tree* childnode, Tree* parentnode) {
 
 	if (childnode->position % 2 == 0) // this is a left child in this case
@@ -82,6 +83,25 @@ string Tree::getID(Tree* node) {
 }
 string Tree::getEventHash(Tree* node) {
 	return hash(this->Event);
+}
+
+
+
+// Constructors
+Tree::Tree() {  // default constructor for use only with the first node in our tree, will always have a random event for simplicity
+	ID = createID(1, "");
+	CreateEvent();
+
+
+}
+Tree::Tree(string parent) {  // construct that allows us to build children passing the parents ID to the child, randomly generating the event
+	ID = createID(2, parent);
+	CreateEvent();
+
+}
+Tree::Tree(string parent, string eventtoadd) { // constructor that allos us to build the children from parent ID and a string event passed as an argument 
+	ID = createID(2, parent);
+	CreateEvent(eventtoadd);
 }
 
 

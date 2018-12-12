@@ -5,8 +5,8 @@
 #include<vector>
 #include<iostream>
 #include<numeric> // this is used to turn our history into a string for print/debug
-#include<random>
-#include<cmath>
+
+
 using namespace std;
 
 struct  Tree
@@ -25,6 +25,9 @@ struct  Tree
 	string getID(Tree* node);
 	string getEventHash(Tree* node);
 	void printNode();
+	Tree();  // default constructor for use only with the first node in our tree
+	Tree(string parent);  // construct that allows us to build children passing the parents ID to the child, randomly generating the event
+	Tree(string parent, string eventtoadd); // constructor that allos us to build the children from parent ID and a string event passed as an argument 
 
 };
 

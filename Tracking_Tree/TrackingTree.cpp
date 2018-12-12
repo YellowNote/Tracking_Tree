@@ -10,12 +10,14 @@
 int main()
 {
 
-
+	/*
 	vector<Tree> theTree;
 	theTree.at(0) = Tree();
 	Tree currentTree = theTree.at(0);
 	currentTree.printNode();
-
+	*/
+	
+	
 
 
 
