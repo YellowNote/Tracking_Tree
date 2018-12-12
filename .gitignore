@@ -37,4 +37,4 @@ Tracking_Tree.vcxproj
 Tracking_Tree.vcxproj.fliters
 x64/*
 *.db
-*.suo
+.vs/Tracking_Tree/v15/.suo
