@@ -5,7 +5,7 @@
 #include<vector>
 #include<iostream>
 #include<numeric> // this is used to turn our history into a string for print/debug
-
+#include<functional>//for the hash
 
 using namespace std;
 
@@ -19,7 +19,7 @@ struct  Tree
 	void CreateEvent(string input);
 
 	string createID(int position, string parent);
-	string hash(string thingToHash);
+	string hashing(string thingToHash);
 	Tree createNode(int position, string parent);
 	void updateParentHash(Tree* childnode, Tree* parentnode);
 	string getID(Tree* node);
