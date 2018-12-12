@@ -12,7 +12,11 @@ using namespace std;
 struct  Tree
 {
 	int position;
-	string ID, ParentID, Event, LHash = NULL, RHash = NULL;
+	string ID;
+	string ParentID;
+	string Event;
+	string LHash;
+	string RHash;
 	vector<string> LHist, RHist;
 
 	void CreateEvent();
@@ -20,16 +24,21 @@ struct  Tree
 
 	string createID(int position, string parent);
 	string hash(string thingToHash);
-	Tree createNode(int position, string parent);
+
 	void updateParentHash(Tree* childnode, Tree* parentnode);
 	string getID(Tree* node);
 	string getEventHash(Tree* node);
 	void printNode();
+	//constructors
 	Tree();  // default constructor for use only with the first node in our tree
 	Tree(string parent);  // construct that allows us to build children passing the parents ID to the child, randomly generating the event
 	Tree(string parent, string eventtoadd); // constructor that allos us to build the children from parent ID and a string event passed as an argument 
 
+
+
 };
+
+
 
 
 
